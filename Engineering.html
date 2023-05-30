@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .headerContainer {
+                display:flex; /* This is to flexibly display items within a container*/
+            }
+
+            .sub-container {
+                flex:auto;
+                padding: 0px;
+                background-color: #ffffff;
+                
+            }
+
+            .titleContainer {
+                display:flex;
+                flex-direction:column;
+            }
+
+            .titleSubContainer {
+                flex: auto;
+                /*border: 1px solid rgb(255, 0, 0);*/
+            }
+
+            .titleMedusaContainer {
+                display:flex; 
+                flex-direction:row;
+                /*border: 1px solid rgb(255, 0, 0);*/
+            }
+
+
+            .navigationContainer {
+                display:flex; 
+                flex-direction:row;
+            }
+
+            
+
+            a:default {text-decoration: none; color:black}
+
+            a:link { text-decoration: none; }
+
+            a:visited { text-decoration: none; color:black}
+
+            a:active { text-decoration: none; color:black}
+
+            .headerText {
+                font-family :Helvetica;
+                font-size : 2vw;
+                font-weight:bold;
+            }
+
+            .headerText > .headerSubtitle {
+                font-size : 1vw;
+                font-weight:bold;
+            }
+
+            .headerText .headerRightLabel {
+                font-size : 25pt; 
+                text-align:right;
+            }
+
+            .navigationItem {
+                text-align:center;
+                flex:auto;
+                font-family:Georgia;
+                font-size : 1.5vw;
+                font-weight:normal;
+                padding:1vw;
+                font-style:italic;
+            }   
+
+            .navigationContainer a {
+                position: relative;
+            }
+
+            .navigationContainer a::before {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 10%;
+                width: 0;
+                height: 5px;
+                background-color: black;
+                transition: width 0.3s;
+            }
+
+            .navigationContainer a:hover::before {
+                width: 80%;
+            }
+        </style>
+  </head>
+  <body>
+    <div class = "headerContainer">
+        <div class = "sub-container" style = "width:5vw">
+            <div class = "headerText" style = "padding-top:1vw">
+                ATTICUS REX
+                <div class = "headerSubtitle">
+                    Intellēctuālis.
+                </div>
+            </div>
+            
+        </div>
+
+        <div class = "sub-container" style = "width:45vw; text-align:left"> 
+            <div class = "titleContainer">
+                <div class = "titleSubContainer">
+                    <hr style = "color:black;height:1px;background-color:black">
+                    <div class = "navigationContainer">
+                        <a class = "navigationItem" href = "index.html" >
+                            Home
+                        </a>
+                        <a class = "navigationItem"  href = "About.html">
+                            About
+                        </a>
+                        <a class = "navigationItem" style = "font-weight:bold">
+                            Engineering
+                        </a>
+                        <a class = "navigationItem" href = "Modeling.html">
+                            Modeling
+                        </a>
+                        <a class = "navigationItem" href = "Analytics.html">
+                            Analytics
+                        </a>
+                        <a class = "navigationItem" href = "Contact.html">
+                            Contact
+                        </a>
+
+
+                    </div>
+                    <hr style = "color:black;height:1px;background-color:black">
+                </div>
+
+                <div class = "titleSubContainer">
+                    <div class = "titleMedusaContainer">
+                        <div class = "sub-container" style = "text-align:left;width:20vw;padding:3vw;padding-left:0vw">
+                            <div class = "headerText" style = "font-size:3vw">
+                                Engineering
+                                
+                                <div class = "headerText" style = "font-family:Arial;font-weight:normal; font-size:1vw; padding-top:2vw;line-height:150%; text-indent:3vw">
+                                    <b style = "font-size:1.1vw">Optimal Damping for Improved Controllability of Shock Test Fixture: </b>
+                                    Naval antennas require extensive shock testing and evaluation before being deployed on surface warships. The purpose of this 
+                                    project was to design, simulate, validate, manufacture, and test a prototype that emulates shock impacts on naval communication 
+                                    antennas for the Naval Surface Warfare Center - Dahlgren Division (Dahlgren). The team produced an active and a passive solution 
+                                    with priority on modeling sample shock, which is irregular, high-frequency and high-velocity. The full report covers customer needs, 
+                                    concept generation, prototyping, concept down selection, designs, simulation, analysis, and general team attributes.  
+                                </div>
+
+                                <a href = "pdfs/ME Final Report.pdf" target = "_blank" style = "font-size:1.5vw; font-family:Georgia; font-style:italic;font-weight:normal;color:black">
+                                    Full Report
+                                    <hr>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class = "sub-container" style = "text-align:right;width:10vw;padding-top:8vw">
+                            <img src = "images/NWSC.png" style = "width:25vw">
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class = "titleSubContainer">
+                    <div style = "display:flex;flex-direction:row">
+                        <div class = "sub-container" style = "text-align:left;width:28vw; padding-top:2vw">
+                            <img src = "images/Pendulum.PNG" style = "width:20vw;">
+                        </div>
+                        
+                        <div class = "sub-container" style = "text-align:left;width:30vw;padding:2vw; padding-top:0vw">
+                            <div class = "headerText" style = "font-family:Arial;font-weight:normal; font-size:1vw; padding-top:2vw;line-height:150%; text-indent:3vw; padding-bottom:2vw">
+                                <b style = "font-size:1.1vw">Eigenvalue Processing of Pendula Dynamics: </b>
+                                Advised by Dr. Mark Embree, this project sought to design a hands-on experiment for students in CMDA 3605 
+                                courses to see eigenvalues in action. The experiment involved collecting high-speed video of a swinging 
+                                pendulum with multiple connected masses, converting the video to time series data, processing the time series data
+                                 to extract the fundamental frequencies, and finally comparing the experimental values to theoretical ones. 
+
+                            </div>
+
+                            <a href = "pdfs/Final Report.pdf" target = "_blank" style = "font-size:1.5vw; font-family:Georgia; font-style:italic;font-weight:normal;color:black">
+                                Full Report
+                                <hr>
+                            </a>
+
+                        </div>
+
+                        
+                            
+                            
+                            
+
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class = "titleContainer" >
+                
+            </div>
+        
+
+            
+        </div>
+
+        
+
+        <div class = "sub-container" style = "width:5vw">
+            
+        </div>
+    </div>
+
+    
+    
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .headerContainer {
+                display:flex; /* This is to flexibly display items within a container*/
+            }
+
+            .sub-container {
+                flex:auto;
+                padding: 0px;
+                background-color: #ffffff;
+                
+            }
+
+            .titleContainer {
+                display:flex;
+                flex-direction:column;
+            }
+
+            .titleSubContainer {
+                flex: auto;
+                /*border: 1px solid rgb(255, 0, 0);*/
+            }
+
+            .titleMedusaContainer {
+                display:flex; 
+                flex-direction:row;
+                /*border: 1px solid rgb(255, 0, 0);*/
+            }
+
+
+            .navigationContainer {
+                display:flex; 
+                flex-direction:row;
+            }
+
+            
+
+            a:default {text-decoration: none; color:black}
+
+            a:link { text-decoration: none; }
+
+            a:visited { text-decoration: none; color:black}
+
+            a:active { text-decoration: none; color:black}
+
+            .headerText {
+                font-family :Helvetica;
+                font-size : 2vw;
+                font-weight:bold;
+            }
+
+            .headerText > .headerSubtitle {
+                font-size : 1vw;
+                font-weight:bold;
+            }
+
+            .headerText .headerRightLabel {
+                font-size : 25pt; 
+                text-align:right;
+            }
+
+            .navigationItem {
+                text-align:center;
+                flex:auto;
+                font-family:Georgia;
+                font-size : 1.5vw;
+                font-weight:normal;
+                padding:1vw;
+                font-style:italic;
+            }   
+
+            .navigationContainer a {
+                position: relative;
+            }
+
+            .navigationContainer a::before {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 10%;
+                width: 0;
+                height: 5px;
+                background-color: black;
+                transition: width 0.3s;
+            }
+
+            .navigationContainer a:hover::before {
+                width: 80%;
+            }
+        </style>
+  </head>
+  <body>
+    <div class = "headerContainer">
+        <div class = "sub-container" style = "width:5vw">
+            <div class = "headerText" style = "padding-top:1vw">
+                ATTICUS REX
+                <div class = "headerSubtitle">
+                    Intellēctuālis.
+                </div>
+            </div>
+            
+        </div>
+
+        <div class = "sub-container" style = "width:45vw; text-align:left"> 
+            <div class = "titleContainer">
+                <div class = "titleSubContainer">
+                    <hr style = "color:black;height:1px;background-color:black">
+                    <div class = "navigationContainer">
+                        <a class = "navigationItem" href = "index.html" >
+                            Home
+                        </a>
+                        <a class = "navigationItem"  href = "About.html">
+                            About
+                        </a>
+                        <a class = "navigationItem" href = "Engineering.html">
+                            Engineering
+                        </a>
+                        <a class = "navigationItem" href = "Modeling.html">
+                            Modeling
+                        </a>
+                        <a class = "navigationItem" href = "Analytics.html">
+                            Analytics
+                        </a>
+                        <a class = "navigationItem" style = "font-weight:bold">
+                            Contact
+                        </a>
+
+
+                    </div>
+                    <hr style = "color:black;height:1px;background-color:black">
+                </div>
+
+                <div class = "titleSubContainer">
+                    <div class = "titleMedusaContainer">
+                        <div class = "sub-container" style = "text-align:left;width:15vw;padding:3vw;padding-left:0vw;padding-bottom:0vw">
+                            <div class = "headerText" style = "font-size:3vw">
+                                Contact
+                                
+                                <div class = "headerText" style = "font-family:Arial;font-weight:normal; font-size:1vw; padding-top:2vw;line-height:150%">
+                                    <b style = "font-size:1.1vw">Email:</b> 
+                                    atticusdrex@gmail.com
+                                </div>
+                                <div class = "headerText" style = "font-family:Arial;font-weight:normal; font-size:1vw; padding-top:2vw;line-height:150%">
+                                    <a href = "https://www.linkedin.com/in/atticus-rex-717581191/" target = "_blank" style = "font-size:1.1vw;font-weight:bold;color:black">
+                                        LinkedIn
+                                    </a>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                        
+                        
+                        <div class = "sub-container" style = "text-align:right;width:15vw;padding-top:8vw">
+                            <img src = "images/PCAPhoto.PNG" style = "width:25vw">
+                        </div>
+                    </div>
+                    <hr style = "height:1px; background-color:black">
+                </div>
+            </div>
+
+            <div class = "titleContainer" >
+                
+            </div>
+        
+
+            
+        </div>
+
+        
+
+        <div class = "sub-container" style = "width:5vw">
+            
+        </div>
+    </div>
+
+    
+    
+  </body>
+</html>

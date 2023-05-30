@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .headerContainer {
+                display:flex; /* This is to flexibly display items within a container*/
+            }
+
+            .sub-container {
+                flex:auto;
+                padding: 0px;
+                background-color: #ffffff;
+                
+            }
+
+            .titleContainer {
+                display:flex;
+                flex-direction:column;
+            }
+
+            .titleSubContainer {
+                flex: auto;
+                /*border: 1px solid rgb(255, 0, 0);*/
+            }
+
+            .titleMedusaContainer {
+                display:flex; 
+                flex-direction:row;
+                /*border: 1px solid rgb(255, 0, 0);*/
+            }
+
+
+            .navigationContainer {
+                display:flex; 
+                flex-direction:row;
+            }
+
+            
+
+            a:default {text-decoration: none; color:black}
+
+            a:link { text-decoration: none; }
+
+            a:visited { text-decoration: none; color:black}
+
+            a:active { text-decoration: none; color:black}
+
+            .headerText {
+                font-family :Helvetica;
+                font-size : 2vw;
+                font-weight:bold;
+            }
+
+            .headerText > .headerSubtitle {
+                font-size : 1vw;
+                font-weight:bold;
+            }
+
+            .headerText .headerRightLabel {
+                font-size : 25pt; 
+                text-align:right;
+            }
+
+            .navigationItem {
+                text-align:center;
+                flex:auto;
+                font-family:Georgia;
+                font-size : 1.5vw;
+                font-weight:normal;
+                padding:1vw;
+                font-style:italic;
+            }   
+
+            .navigationContainer a {
+                position: relative;
+            }
+
+            .navigationContainer a::before {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 10%;
+                width: 0;
+                height: 5px;
+                background-color: black;
+                transition: width 0.3s;
+            }
+
+            .navigationContainer a:hover::before {
+                width: 80%;
+            }
+        </style>
+  </head>
+  <body>
+    <div class = "headerContainer">
+        <div class = "sub-container" style = "width:5vw">
+            <div class = "headerText" style = "padding-top:1vw">
+                ATTICUS REX
+                <div class = "headerSubtitle">
+                    Intellēctuālis.
+                </div>
+            </div>
+            
+        </div>
+
+        <div class = "sub-container" style = "width:45vw; text-align:left"> 
+            <div class = "titleContainer">
+                <div class = "titleSubContainer">
+                    <hr style = "color:black;height:1px;background-color:black">
+                    <div class = "navigationContainer">
+                        <a class = "navigationItem" href = "index.html" >
+                            Home
+                        </a>
+                        <a class = "navigationItem"  href = "About.html">
+                            About
+                        </a>
+                        <a class = "navigationItem" href = "Engineering.html">
+                            Engineering
+                        </a>
+                        <a class = "navigationItem" href = "Modeling.html">
+                            Modeling
+                        </a>
+                        <a class = "navigationItem" style = "font-weight:bold">
+                            Analytics
+                        </a>
+                        <a class = "navigationItem" href = "Contact.html">
+                            Contact
+                        </a>
+
+
+                    </div>
+                    <hr style = "color:black;height:1px;background-color:black">
+                </div>
+
+                <div class = "titleSubContainer">
+                    <div class = "titleMedusaContainer">
+                        <div class = "sub-container" style = "text-align:left;width:20vw;padding:3vw;padding-left:0vw;padding-bottom:0vw">
+                            <div class = "headerText" style = "font-size:3vw">
+                                Analytics
+                                
+                                <div class = "headerText" style = "font-family:Arial;font-weight:normal; font-size:1vw; padding-top:2vw;line-height:150%; text-indent:3vw">
+                                    <b style = "font-size:1.1vw">Using Neural Networks to Forecast Vegative Health: </b>
+                                    Human-nature interaction has long been a source of interest, study and analysis in the scientific community. As remote sensing and data analysis technology become more sophisticated, the ability to create robust models to accurately measure and predict environmental health increases. This project was completed through Data Science for the Public Good program at Virginia Tech and seeks to use modern data-science techniques to analyze, predict and draw conclusions from remote-sensing quantifications of vegetation health and water distribution.                                </div>
+
+                                
+                            </div>
+                        </div>
+                        
+                        
+                        <div class = "sub-container" style = "text-align:right;width:10vw;padding-top:8vw">
+                            <img src = "images/NDVIImage.png" style = "width:25vw">
+                        </div>
+                    </div>
+                    <a href = "https://dspgtools.shinyapps.io/dspg21ndvi/" target = "_blank" style = "font-size:1.5vw; font-family:Georgia; font-style:italic;font-weight:normal;color:black">
+                        Full Report
+                    </a>
+                    <hr style = "height:1px; background-color:black">
+                </div>
+                
+
+                <div class = "titleSubContainer">
+                    <div style = "display:flex;flex-direction:row">
+                        <div class = "sub-container" style = "text-align:left;width:28vw; padding-top:2vw">
+                            <img src = "images/ZimbabweMap.PNG" style = "width:25vw;">
+                        </div>
+                        
+                        <div class = "sub-container" style = "text-align:left;width:25vw;padding:2vw; padding-top:0vw; padding-bottom:0vw">
+                            <div class = "headerText" style = "font-family:Arial;font-weight:normal; font-size:1vw; padding-top:2vw;line-height:150%; text-indent:3vw; padding-bottom:2vw">
+                                <b style = "font-size:1.1vw">Using PICES Data to Visualize District Level Multidimensional Poverty in Zimbabwe: </b>
+                                This project uses data from the Poverty, Income, Consumption, Expenditure Survey (PICES) to provide granular information on poverty in Zimbabwe. We created multidimensional poverty indices (MPI) at the district and province level and decomposed them into components that focus on education, health, employment, housing conditions, living conditions, assets, agricultural assets, and access to services. We provide interactive tools that allow the user to visualize and study each component and understand their contribution to the MPI. We constructed these measures for two waves of data, 2011 and 2017, to show the changes in poverty over time and across regions. The composition and decomposition of MPI in this project provide evidence-based policy recommendations and interventions for poverty reduction.
+
+                            </div>
+
+                            
+
+                        </div>
+                    </div>
+                    <a href = "https://dspgtools.shinyapps.io/dspg21zimbabwe/" target = "_blank" style = "font-size:1.5vw; font-family:Georgia; font-style:italic;font-weight:normal;color:black">
+                        Full Report
+                    </a>
+                    <hr style = "height:1px; background-color:black">
+                    
+                </div>
+
+
+                
+            </div>
+
+            <div class = "titleContainer" >
+                
+            </div>
+        
+
+            
+        </div>
+
+        
+
+        <div class = "sub-container" style = "width:5vw">
+            
+        </div>
+    </div>
+
+    
+    
+  </body>
+</html>

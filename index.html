@@ -1,287 +1,173 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Atticus Rex Website</title>
-        <style> 
+        <style>
+            .headerContainer {
+                display:flex; /* This is to flexibly display items within a container*/
+            }
 
-        .background {
-            height:auto;
-            background-image:url(images/Background.png);
-            background-size:80vw;
-            padding:1%;
-            padding-right:10vw;
-            padding-left:10vw;
-            float:top;
-            width:60vw;
-        }
+            .sub-container {
+                flex:auto;
+                padding: 0px;
+                background-color: #ffffff;
+                
+            }
 
-        #sidebarContainer {
-            text-align:left;
-            padding:1%;
-            float:right;
+            .titleContainer {
+                display:flex;
+                flex-direction:column;
+            }
+
+            .titleSubContainer {
+                flex: auto;
+                /*border: 1px solid rgb(255, 0, 0);*/
+            }
+
+            .titleMedusaContainer {
+                display:flex; 
+                flex-direction:row;
+                /*border: 1px solid rgb(255, 0, 0);*/
+            }
+
+
+            .navigationContainer {
+                display:flex; 
+                flex-direction:row;
+            }
+
             
-            width:13%;
-        }
-        .container1 {
 
-            padding-top:0%;
-        }
+            a:default {text-decoration: none; color:inherit}
 
-        .link {
-            font-family:Arial;
-            font-size:1vw;
-        }
+            a:link { text-decoration: none; color:inherit}
 
-        #container2 {
-            background-color:#cfeafa;
-            margin-top:5%;
-            height:auto;
-            
-        }
+            a:visited { text-decoration: none; color:inherit}
 
-        #bioContainer {
-            
-            padding-top:1vw;
-            padding-right:10vw;
-            padding-left:10vw;
-            width : auto; 
-            height : auto;
-            text-indent:2vw;
-            display:inline-block;
-        }
+            a:active { text-decoration: none; color:inherit}
 
-        #bioImageContainer {
-            
-            float:top;
-            padding:2%;
-            
-            width :1%;
-        }
+            .headerText {
+                font-family :Helvetica;
+                font-size : 4vw;
+                font-weight:bold;
+            }
 
-        #bioImage {
-            width:56vw;
-            margin-top:0vw;
-            margin-bottom:1vw;
-            margin-right:auto;
-        }
+            .headerText > .headerSubtitle {
+                font-size : 25pt;
+            }
 
-        #title {
-            background-color:#cfeafa;
-            padding-top:1%;
-            padding-bottom:1%;
-        }
+            .headerText .headerRightLabel {
+                font-size : 25pt; 
+                text-align:right;
+            }
 
-        .main {
-            font-weight:bold;
-            font-family:Arial;
-            text-align:center;
-            
-            font-size:4vw;
-            color:#403f3f;
-            margin-bottom:1%;
-            margin-top:1%;
-        }
+            .navigationItem {
+                text-align:center;
+                flex:auto;
+                font-family:Georgia;
+                font-size : 1.5vw;
+                font-weight:normal;
+                padding:1vw;
+                font-style:italic;
+            }   
 
-        .subtitle {
-            font-size:1.3vw;
-            font-weight:100;
-        }
+            .navigationContainer a {
+                position: relative;
+            }
 
-        .sidebarTitle {
-            font-size:16pt;
-            font-weight:100;
-            text-align:left;
-            font-style:italic;
-            padding-bottom:15%;
-        }
+            .navigationContainer a::before {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 10%;
+                width: 0;
+                height: 5px;
+                background-color: black;
+                transition: width 0.3s;
+            }
 
-        .sidebarTitle:link {
-            text-decoration:none;
-        }
-
-        .sidebarTitle:hover {
-            text-decoration:none;
-        }
-
-        .sidebarTitle:visited {
-            text-decoration:none;
-        }
-
-        .sidebarTitle:active {
-            text-decoration:none;
-        }
-
-        .container {
-        width: auto;
-        height: auto;
-        }
-
-        .image-grid {
-            padding: 1%;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
-            grid-gap: 1vw; /* Adjust the gap between images as needed */
-        }
-
-        .image-grid img {
-        height: 16vw; /* Set the desired width for each image */
-        width: auto; /* Maintain aspect ratio */
-        }
-
-        a:link { text-decoration: none; }
-
-        a:hover {text-decoration:none; }
-
-        a:visited { text-decoration: none; }
-
-
-        a:active { text-decoration: none; }
-
-        ul {
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            padding: 0;
-            margin: 0;
-        }
+            .navigationContainer a:hover::before {
+                width: 80%;
+            }
         </style>
-    </head>
-
-    <body style="padding:2%"> 
-        <div class = "mainContainer">
-            <div id = "sidebarContainer">
-                <h1 class = "main sidebarTitle">
-                    <a class = "main sidebarTitle" target="_blank" href = "resources/AtticusRexResumeS23.pdf">
-                        Resume
-                    </a>
-                </h1>
-
-                <h1 class = "main sidebarTitle">
-                    <a class = "main sidebarTitle" target="_blank" href = "resources/ME Final Report.pdf">
-                        Optimal Shock Damping for Improved Controllability of Antenna Test Fixture
-                    </a>
-                </h1>
-
-                <h1 class = "main sidebarTitle">
-                    <a class = "main sidebarTitle" target="_blank" href = "resources/MOR Term Project Atticus Rex.pdf">
-                        Echo State Neural Networks and Noisy Differentiation Algorithms
-                    </a>
-                </h1>
-
-                <h1 class = "main sidebarTitle">
-                    <a class = "main sidebarTitle" target="_blank" href = "resources/Final Report.pdf">
-                        Eigenvalue Processing of Pendula Dynamics
-                    </a>
-                </h1>
-
-                <h1 class = "main sidebarTitle">
-                    <a class = "main sidebarTitle" target="_blank" href = "resources/PPE Capstone Final Draft Atticus Rex.pdf">
-                        Dopamine, Mimicry, and Value Alignment: Artificial Intelligence and Addiction
-                    </a>
-                </h1>
-
-                <h1 class = "main sidebarTitle">
-                    <a class = "main sidebarTitle" target="_blank" href = "resources/Physics_Informed_Neural_Networks.pdf">
-                        Using Physics Informed Neural Networks (PINNs) to Solve the Heat Equation
-                    </a>
-                </h1>
-
-                <h1 class = "main sidebarTitle">
-                    <a class = "main sidebarTitle" href = "https://dspgtools.shinyapps.io/dspg21ndvi/" target = "_blank">Using Neural Networks to Forecast Vegative Health</a>
-                </h1>
-
-                <h1 class = "main sidebarTitle">
-                    <a class = "main sidebarTitle" href = "https://dspgtools.shinyapps.io/dspg21zimbabwe/" target = "_blank">Using PICES Data for Multidimensional Poverty Index </a>
-                </h1>
-
-                
-            </div>
-            <div class="background">  
-                <div id="container1"> 
-                    <div id="title">
-                        <h1 class="main">
-                            ATTICUS REX 
-                        </h1>
-                        <h1 class="main subtitle">
-                            ENGINEERING - MODELING - ANALYTICS
-                        </h1>
-                    </div>  
-                    
-    
-                    
-                </div>
-    
-                <div id="container2">
-                    <div id = "bioContainer">
-                        <p style="font-family:Arial;text-align:left;line-height:150%">
-                            Welcome! I am a recent graduate of Virginia Tech where I graduated Summa Cum Laude and received an Honors Laureate Diploma. 
-                            I received a B.S. in Mechanical Engineering and a B.S. in CMDA (Computational Modeling & Data Analytics). 
-                            I also have minors in Mathematics and PPE (Philosophy, Politics and Economics). My coursework totaled to 227 complete credit hours. 
-                            Come Fall 2023, I will be pursuing an M.S. in Computational Data Analytics at Georgia Tech. This website serves as a repository to 
-                            display some of my recent work in senior capstone projects and extracurricular research (Located at the links to the right). 
-
-
-                             
-                        </p>
-                        <p style="font-family:Arial;text-align:left;line-height:150%">
-                            <b>Education and Skills:</b>
-                            With a degrees in Mechanical Engineering and Computational Modeling and Data Analytics (CMDA), I have gained a 
-                            comprehensive skillset within both fields. My coursework has developed my abilities in subjects such as mathematical modeling, 
-                            statistics, mechanical design, computer science, physics, technical writing, ethics, and effective teamwork, allowing me to
-                             approach challenges from multiple perspectives. I am Fundamentals of Engineering (FE Mechanical) Certified and have advanced
-                             programming skills in Python, Java, SQL, C/C++, R, MATLAB, Git, and Linux. I am well-versed in prototyping, finite element analysis (FEA),
-                            and computational fluid dynamics (CFD) using software such as Solidworks, Ansys, and Siemens NX. Additionally, my fluency in 
-                            Spanish enables effective communication in diverse settings.
-                        </p>
-                        <p style="font-family:Arial;text-align:left;line-height:150%">
-                            <b>Work Experience:</b>
-                            Throughout my academic journey, I have gained invaluable practical experience. As a private tutor, I have guided students through a wide 
-                            range of subjects, including mathematics, physics, computer science, Spanish, and visual arts. This experience has strengthened my 
-                            ability to communicate complex concepts effectively and adapt my teaching approach to meet individual needs. During my internship in 
-                            Riobamba, Ecuador, I led software development and data analytics projects for a VT Agriculture and Applied Economics Research Group. 
-                            I applied my technical expertise and leadership skills to contribute valuable insights and solutions. As a Data Science for the Public Good intern, 
-                            I collaborated with Virginia Tech and the University of Virginia on research presented at a joint symposia. I leveraged convolutional and 
-                            LSTM neural networks to analyze vegetative health using multispectral satellite data, and I helped reconstruct a multidimensional poverty index 
-                            for the Zimbabwe Statistical Agency. In my role as a mathematics lecturer at VT SAASS, I delivered open lectures in various calculus courses, 
-                            demonstrating my ability to engage and inspire students while conveying complex mathematical concepts.
-                        </p>
-
-                        <p style="font-family:Arial;text-align:left;line-height:150%">
-                            <b>Research:</b>
-                            My research endeavors have allowed me to delve into cutting-edge topics and make meaningful contributions. I served as a technical lead
-                            for the design and validation of an active control system aimed at improving the controllability of an antenna test fixture. Additionally,
-                            I explored reservoir computing models for dynamical system modeling, comparing their performance with existing frameworks. 
-                            I also developed an algorithm to effectively differentiate noisy signals, adapting the Total Variation Regularized Derivative. 
-                            In my CMDA capstone project, 
-                            I designed and manufactured a pendulum with multiple swinging masses. With this prototype, I developed an object tracking algorithm and a theoretical 
-                            framework to demonstrate eigenvalue analysis, providing future CMDA Math Modeling students with a practical learning tool.
-
-                            In my PPE capstone project, I applied economic research in neuroeconomics to analyze the impact of AI-induced neuropleasurable experiences, shedding light 
-                            on ethical concerns and economic externalities.
-                        </p>
-                        <p style="font-family:Arial;text-align:left;line-height:150%">
-                            <b>Extracurricular: </b>Beyond my academic pursuits, I have actively engaged in extracurricular activities. As a member of Virginia Tech Honors College, 
-                            I taught a reading seminar on Romantic-Era Poetry and explored various subjects through faculty-student agreements. I have conducted investigations into 
-                            information ethics, political realism, big nudging, and dynamical systems, showcasing my intellectual curiosity and critical thinking skills.
-
-                            Within the Sigma Phi Epsilon Fraternity, I served as the Academic Chair for the SigEp Learning Community. I routinely participated in fundraising efforts, 
-                            generating over $30,000 annually for the Montgomery County Emergency Assistance Program (MCEAP).
-                        </p>
-                    </div>
-                    <div class="image-grid">
-                        <img src="images/Picture13.png" alt="Image 1">
-                        <img src="images/MagnetModeling.PNG" alt="Image 2">
-                        <img src="images/PCAPhoto.PNG" alt="Image 3">
-                        <!-- Add more images here -->
-                      </div>
-                </div>
-                
-                
-            </div>
+  </head>
+  <body>
+    <div class = "headerContainer">
+        <div class = "sub-container" style = "width:5vw">
+            
         </div>
-    </body>
-    
-</html>
 
+        <div class = "sub-container" style = "width:45vw; text-align:left"> 
+            <div class = "titleContainer">
+                <div class = "titleSubContainer">    
+                    <div class = "titleMedusaContainer">
+                        <div class = "headerText" style = "padding-top:7vw">
+                            ATTICUS REX
+                            <div class = "headerSubtitle">
+                                Intellēctuālis.
+                            </div>
+                            <div class = "headerSubtitle" style = "font-size:1vw; font-weight:normal; font-style:italic; padding-top:5vw">
+                                "Intelligence is quickness in seeing things as they are."
+                            </div>
+                        </div>
+                        <div class = "sub-container" style = "text-align:right;width:10vw">
+                            <img src = "images/MedusaGraphic.png" style = "width:17vw">
+                        </div>
+                    </div>
+
+
+                </div>
+                
+
+                
+                
+                <div class = "titleSubContainer">
+                    <hr style = "color:black;height:1px;background-color:black">
+                    <div class = "navigationContainer">
+                        <a class = "navigationItem" style = "font-weight:bold">
+                            Home
+                        </a>
+                        <a class = "navigationItem" href = "About.html">
+                            About
+                        </a>
+                        <a class = "navigationItem" href = "Engineering.html">
+                            Engineering
+                        </a>
+                        <a class = "navigationItem" href = "Modeling.html">
+                            Modeling
+                        </a>
+                        <a class = "navigationItem" href = "Analytics.html">
+                            Analytics
+                        </a>
+                        <a class = "navigationItem" href = "Contact.html">
+                            Contact
+                        </a>
+                    </div>
+                    <hr style = "color:black;height:1px;background-color:black">
+                </div>
+
+                <div class = "headerContainer" style = "justify-content:center;padding-top:1vw; text-align:center;"> 
+                    <img src = "images/Drawing.png" style = "Height:35vw; align-self:center">
+                    
+                </div>
+                <div class = "headerContainer" style = "justify-content:center; text-align:center;">
+                    <p style = "font-family:Georgia; font-size:1vw">
+                        © Atticus Rex, 2023. 
+                    </p>
+                </div>
+            </div>
+        
+
+            
+        </div>
+
+        
+
+        <div class = "sub-container" style = "width:5vw">
+            
+        </div>
+    </div>
+
+    
+    
+  </body>
+</html>

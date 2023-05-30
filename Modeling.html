@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .headerContainer {
+                display:flex; /* This is to flexibly display items within a container*/
+            }
+
+            .sub-container {
+                flex:auto;
+                padding: 0px;
+                background-color: #ffffff;
+                
+            }
+
+            .titleContainer {
+                display:flex;
+                flex-direction:column;
+            }
+
+            .titleSubContainer {
+                flex: auto;
+                /*border: 1px solid rgb(255, 0, 0);*/
+            }
+
+            .titleMedusaContainer {
+                display:flex; 
+                flex-direction:row;
+                /*border: 1px solid rgb(255, 0, 0);*/
+            }
+
+
+            .navigationContainer {
+                display:flex; 
+                flex-direction:row;
+            }
+
+            
+
+            a:default {text-decoration: none; color:black}
+
+            a:link { text-decoration: none; }
+
+            a:visited { text-decoration: none; color:black}
+
+            a:active { text-decoration: none; color:black}
+
+            .headerText {
+                font-family :Helvetica;
+                font-size : 2vw;
+                font-weight:bold;
+            }
+
+            .headerText > .headerSubtitle {
+                font-size : 1vw;
+                font-weight:bold;
+            }
+
+            .headerText .headerRightLabel {
+                font-size : 25pt; 
+                text-align:right;
+            }
+
+            .navigationItem {
+                text-align:center;
+                flex:auto;
+                font-family:Georgia;
+                font-size : 1.5vw;
+                font-weight:normal;
+                padding:1vw;
+                font-style:italic;
+            }   
+
+            .navigationContainer a {
+                position: relative;
+            }
+
+            .navigationContainer a::before {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 10%;
+                width: 0;
+                height: 5px;
+                background-color: black;
+                transition: width 0.3s;
+            }
+
+            .navigationContainer a:hover::before {
+                width: 80%;
+            }
+        </style>
+  </head>
+  <body>
+    <div class = "headerContainer">
+        <div class = "sub-container" style = "width:5vw">
+            <div class = "headerText" style = "padding-top:1vw">
+                ATTICUS REX
+                <div class = "headerSubtitle">
+                    Intellēctuālis.
+                </div>
+            </div>
+            
+        </div>
+
+        <div class = "sub-container" style = "width:45vw; text-align:left"> 
+            <div class = "titleContainer">
+                <div class = "titleSubContainer">
+                    <hr style = "color:black;height:1px;background-color:black">
+                    <div class = "navigationContainer">
+                        <a class = "navigationItem" href = "index.html" >
+                            Home
+                        </a>
+                        <a class = "navigationItem"  href = "About.html">
+                            About
+                        </a>
+                        <a class = "navigationItem" href = "Engineering.html">
+                            Engineering
+                        </a>
+                        <a class = "navigationItem" style = "font-weight:bold">
+                            Modeling
+                        </a>
+                        <a class = "navigationItem" href = "Analytics.html">
+                            Analytics
+                        </a>
+                        <a class = "navigationItem" href = "Contact.html">
+                            Contact
+                        </a>
+
+
+                    </div>
+                    <hr style = "color:black;height:1px;background-color:black">
+                </div>
+
+                <div class = "titleSubContainer">
+                    <div class = "titleMedusaContainer">
+                        <div class = "sub-container" style = "text-align:left;width:20vw;padding:3vw;padding-left:0vw;padding-bottom:0vw">
+                            <div class = "headerText" style = "font-size:3vw">
+                                Modeling
+                                
+                                <div class = "headerText" style = "font-family:Arial;font-weight:normal; font-size:1vw; padding-top:2vw;line-height:150%; text-indent:3vw">
+                                    <b style = "font-size:1.1vw">Echo State Networks for Dynamical System Modeling: </b>
+                                    This paper develops a framework for improving upon traditional regression methods to model discrete nonlinear dynamical systems. This framework is derived from a branch of recurrent neural-networks called Echo State Networks (ESNs). This report compares this methodology to the famous Sparse Identification of Nonlinear Dynamics (SINDy) framework developed by Brunton et al. This investigation specifically analyzes the Lorenz System as an example nonlinear and chaotic system. In the models investigated within this report, the Linear ESN model outperforms the SINDy algorithm when noise in the system is sufficiently low. The SINDy algorithm is also far more computationally intensive, requiring much more data to yield comparable results. In addition, SINDy requires sampling of a numerical derivative of a signal. Using finite difference methods amplifies any noise present in the signal, and thus, a direct, discrete method for calculating a regularized derivative is proposed, based on the Total Variation Regularized Derivative (TVD).   
+                                </div>
+
+                                <a href = "pdfs/MOR Term Project Atticus Rex.pdf" target = "_blank" style = "font-size:1.5vw; font-family:Georgia; font-style:italic;font-weight:normal;color:black">
+                                    Full Report
+                                </a>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class = "sub-container" style = "text-align:right;width:10vw;padding-top:8vw">
+                            <img src = "images/ESNReference.PNG" style = "width:25vw">
+                        </div>
+                    </div>
+                    <hr style = "height:1px; background-color:black">
+                </div>
+                
+
+                <div class = "titleSubContainer">
+                    <div style = "display:flex;flex-direction:row">
+                        <div class = "sub-container" style = "text-align:left;width:28vw; padding-top:2vw">
+                            <img src = "images/NNApproximation.png" style = "width:40vw;">
+                        </div>
+                        
+                        <div class = "sub-container" style = "text-align:left;width:10vw;padding:2vw; padding-top:0vw; padding-bottom:0vw">
+                            <div class = "headerText" style = "font-family:Arial;font-weight:normal; font-size:1vw; padding-top:2vw;line-height:150%; text-indent:3vw; padding-bottom:2vw">
+                                <b style = "font-size:1.1vw">Using Physics Informed Neural Networks (PINNs) to Solve the Heat Equation: </b>
+                                This paper examines the use of a novel technique that uses the auto-differentiation ca-
+                                pability of neural networks to solve the heat equation. This is a method that was proposed
+                                in Raissi, 2019 et al. This method makes use of neural networks as universal function
+                                approximators to match the solution to a partial differential equation. 
+
+                            </div>
+
+                            
+
+                        </div>
+                    </div>
+                    <a href = "pdfs/Physics_Informed_Neural_Networks.pdf" target = "_blank" style = "font-size:1.5vw; font-family:Georgia; font-style:italic;font-weight:normal;color:black">
+                        Full Report
+                    </a>
+                    <hr style = "height:1px; background-color:black">
+                    
+                </div>
+
+                <div class = "titleSubContainer">
+                    <div style = "display:flex;flex-direction:column">
+                        <div class = "sub-container" style = "text-align:left;width:65vw;padding-top:2vw;justify-content:center;text-align:center">
+                            <img src = "images/DopamineGraph.png" style = "width:40vw;">
+                        </div>
+                        
+                        <div class = "sub-container" style = "text-align:left;width:65vw;padding:2vw; padding-top:0vw">
+                            <div class = "headerText" style = "font-family:Arial;font-weight:normal; font-size:1vw; padding-top:2vw;line-height:150%; text-indent:3vw; padding-bottom:2vw">
+                                <b style = "font-size:1.1vw">Dopamine, Mimicry, and Value Alignment: Artificial Intelligence and Addiction: </b>
+                                Computer scientists, philosophers, economists, and many others have voiced concerns about Artificial Intelligence (AI) for decades. This paper provides a framework and a review of how AI can be addictive by mimicking neuropleasurable stimuli for humans. It argues that this problem is exacerbated when the values of the humans interacting with AI and the values of the AI are poorly aligned. The paper examines the role of the dopaminergic reward system in powerful behavior reinforcement, what economic gains and externalities this causes, and how this may disproportionately affect certain subsets of the population. This paper also proposes a model to illustrate how, when considering factors of time, effort, and expected reward, the magnitude of the reward is not deterministic of human action. Lastly, the paper examines ethical frameworks and contemporary theories governing the use of AI to produce large-scale addiction, big-nudging, and general manipulation. 
+
+                            </div>
+
+                            <a href = "pdfs/PPE Capstone Final Draft Atticus Rex.pdf" target = "_blank" style = "font-size:1.5vw; font-family:Georgia; font-style:italic;font-weight:normal;color:black">
+                                Full Report
+                                <hr>
+                            </a>
+
+                        </div>
+
+                        
+                            
+                            
+                            
+
+                    </div>
+                    
+                </div>
+
+                
+            </div>
+
+            <div class = "titleContainer" >
+                
+            </div>
+        
+
+            
+        </div>
+
+        
+
+        <div class = "sub-container" style = "width:5vw">
+            
+        </div>
+    </div>
+
+    
+    
+  </body>
+</html>
