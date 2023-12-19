@@ -125,8 +125,8 @@
                         <a class = "navigationItem" href = "Analytics.html" style = "color:black">
                             Analytics
                         </a>
-                        <a class = "navigationItem" href = "Contact.html" style = "color:black">
-                            Contact
+                        <a class = "navigationItem" href = "pdfs/AtticusRexResume.pdf" style = "color:black" target = "_blank">
+                            Resume
                         </a>
 
 
@@ -135,20 +135,97 @@
                 </div>
 
                 <div class = "titleSubContainer">
-                    <div class = "titleMedusaContainer">
-                        <div class = "sub-container" style = "text-align:left;width:20vw;padding:3vw;padding-left:0vw;padding-bottom:0vw">
-                            <div class = "headerText" style = "font-size:3vw">
-                                Modeling
-                                
-                                <div class = "headerText" style = "font-family:Arial;font-weight:normal; font-size:1vw; padding-top:2vw;line-height:150%; text-indent:3vw">
-                                    <b style = "font-size:1.1vw">Echo State Networks for Dynamical System Modeling: </b>
-                                    This paper develops a framework for improving upon traditional regression methods to model discrete nonlinear dynamical systems. This framework is derived from a branch of recurrent neural-networks called Echo State Networks (ESNs). This report compares this methodology to the famous Sparse Identification of Nonlinear Dynamics (SINDy) framework developed by Brunton et al. This investigation specifically analyzes the Lorenz System as an example nonlinear and chaotic system. In the models investigated within this report, the Linear ESN model outperforms the SINDy algorithm when noise in the system is sufficiently low. The SINDy algorithm is also far more computationally intensive, requiring much more data to yield comparable results. In addition, SINDy requires sampling of a numerical derivative of a signal. Using finite difference methods amplifies any noise present in the signal, and thus, a direct, discrete method for calculating a regularized derivative is proposed, based on the Total Variation Regularized Derivative (TVD).   
+                    <div style = "display:flex;flex-direction:column">
+                        <div class = "headerText" style = "font-size:3vw">
+                            Modeling 
+
+                            
+                            <div class = "sub-container" style = "text-align:left;width:55vw;padding:2vw; padding-top:0vw; padding-bottom:0vw">
+                                <div class = "headerText" style = "font-family:Arial;font-weight:normal; font-size:1vw; padding-top:2vw;line-height:150%; text-indent:3vw; padding-bottom:2vw">
+                                    <b style = "font-size:1.1vw"> Evaluating Nonlinear Classification Methods for Valuation Changes in Financial Time-Series Data and Portfolio Optimization: </b>
+                                    This paper investigates Adaptive Boosting (AdaBoost), Kernel Ridge Regression, and Kernel Support Vector Machines and their ability to predict valuation changes in Exon Mobil stock augmented with exogenous regressors of oil price per barrel, S&P 500 data, google search data, and electric car demand. Further, this report also investigates applying the AdaBoost algorithm to high-frequency trading, optimized and diversified by applying Markowitz Portfolio theory to form a convex minimization problem. The report found that AdaBoost outperformed KRR, and KSVM, especially when the number of rounds of boosting was increased. Further, the portfolio optimization algorithm converged on six companies to apply the algorithm to and outputted the optimal allocation of capital to each strategy. This has strong implications in the field of quantitative finance and was demonstrated to be profitable in this paper.                                 
                                 </div>
 
-                                <a href = "pdfs/MOR Term Project Atticus Rex.pdf" target = "_blank" style = "font-size:1.5vw; font-family:Georgia; font-style:italic;font-weight:normal;color:black">
-                                    Full Report
-                                </a>
                             </div>
+                            
+                            
+                        </div>
+
+                        <div class = "sub-container" style = "text-align:center;width:55vw; padding-top:0vw">
+                            <img src = "images/AutoValidation.png" style = "width:35vw;">
+                        </div>
+                        
+                        
+                    </div>
+                    <a href = "pdfs/CSE6740FinalReport.pdf" target = "_blank" style = "font-size:1.5vw; font-family:Georgia; font-style:italic;font-weight:normal;color:black">
+                        Full Report
+                    </a>
+                    <hr style = "height:1px; background-color:black">
+                </div>
+
+                <div class = "titleSubContainer">
+                    <div style = "display:flex;flex-direction:row">
+                        <div class = "headerText" style = "font-size:3vw">
+                            <div class = "sub-container" style = "text-align:left;width:28vw; padding-top:2vw">
+                                <img src = "images/PySRNoise.png" style = "width:30vw;">
+                            </div>
+                            
+                            
+                        </div>
+                        
+                        <div class = "sub-container" style = "text-align:left;width:20vw;padding:2vw; padding-top:3vw; padding-bottom:0vw">
+                            <div class = "headerText" style = "font-family:Arial;font-weight:normal; font-size:1vw; padding-top:0vw;line-height:150%; text-indent:3vw; padding-bottom:2vw">
+                                <b style = "font-size:1.1vw"> Discovering Epidemiological ODE Models from Data: </b>
+                                This project seeks to discover governing differential equations directly from data to determine the overall course of an epidemic. The two methodologies used to accomplish this will be the popular SINDy algorithm, developed by Brunton and Kutz et al. as well as the symbolic regression model applied to the derivative of the model. The group successfully used both methods to recover the SIR model from synthetic data with noise artificially added and to predict COVID-19 data. The PySR model, when effectively regularized showed promise in being able to robustly recover governing differential equations in the presence of noisy data. 
+                            </div>
+
+                            
+
+                        </div>
+                    </div>
+                    <a href = "pdfs/CSE8803___EPI_Project.pdf" target = "_blank" style = "font-size:1.5vw; font-family:Georgia; font-style:italic;font-weight:normal;color:black">
+                        Full Report
+                    </a>
+                    <hr style = "height:1px; background-color:black">
+                </div>
+
+                <div class = "titleSubContainer">
+                    <div style = "display:flex;flex-direction:row">
+                        <div class = "sub-container" style = "text-align:left;width:25vw;padding:0vw; padding-top:3vw; padding-bottom:0vw">
+                            <div class = "headerText" style = "font-family:Arial;font-weight:normal; font-size:1vw; padding-top:0vw;line-height:150%; text-indent:3vw; padding-bottom:2vw">
+                                <b style = "font-size:1.1vw"> Dynamic Traffic Network Simulation and Modeling the Impact of Pluvial Flash Flooding: </b>
+                                In contemporary transportation systems, the management of traffic flow under heavy load and unpredictable events such as flash floods are a critical challenge. The conventional static traffic assignment, where routes are fixed at the onset, is insufficient in addressing real-time variations in trip volumes, accidents, work zones, and weather conditions. Dynamic Traffic Assignment (DTA) is a pragmatic solution, adapting routing strategies continuously to evolving traffic conditions. Existing navigation services, while adept at adapting to incidents like accidents and road closures, often neglect unreported events like flash floods, posing a significant threat to both drivers and system integrity. By simplifying the traffic network setting, we will replicate diverse flooding intensities, enabling comprehensive evaluation of our dynamic traffic assignment strategy. By systematically analyzing these simulations, our research aims to establish a robust and adaptive framework for rerouting under flash flood conditions, thereby enhancing the resilience and safety of modern transportation networks. 
+                            </div>
+                        </div>
+                        <div class = "headerText" style = "font-size:3vw">
+                            <div class = "sub-container" style = "text-align:right;width:23vw; padding-top:2vw">
+                                <img src = "images/TravelTime.png" style = "width:23vw;">
+                            </div>
+                            
+                            
+                        </div>
+                        
+                        
+                    </div>
+                    <a href = "pdfs/Final Report_Final.pdf" target = "_blank" style = "font-size:1.5vw; font-family:Georgia; font-style:italic;font-weight:normal;color:black">
+                        Full Report
+                    </a>
+                    <hr style = "height:1px; background-color:black">
+                </div>
+
+                <div class = "titleSubContainer">
+                    <div class = "titleMedusaContainer">
+                        <div class = "sub-container" style = "text-align:left;width:20vw;padding:3vw;padding-left:0vw;padding-bottom:0vw; padding-top:0vw">
+                            <div class = "headerText" style = "font-family:Arial;font-weight:normal; font-size:1vw; padding-bottom:2vw; padding-top:2vw;line-height:150%; text-indent:3vw">
+                                <b style = "font-size:1.1vw">Echo State Networks for Dynamical System Modeling: </b>
+                                This paper develops a framework for improving upon traditional regression methods to model discrete nonlinear dynamical systems. This framework is derived from a branch of recurrent neural-networks called Echo State Networks (ESNs). This report compares this methodology to the famous Sparse Identification of Nonlinear Dynamics (SINDy) framework developed by Brunton et al. This investigation specifically analyzes the Lorenz System as an example nonlinear and chaotic system. In the models investigated within this report, the Linear ESN model outperforms the SINDy algorithm when noise in the system is sufficiently low. The SINDy algorithm is also far more computationally intensive, requiring much more data to yield comparable results. In addition, SINDy requires sampling of a numerical derivative of a signal. Using finite difference methods amplifies any noise present in the signal, and thus, a direct, discrete method for calculating a regularized derivative is proposed, based on the Total Variation Regularized Derivative (TVD).  
+
+                            </div>
+
+                            <a href = "pdfs/MOR Term Project Atticus Rex.pdf" target = "_blank" style = "font-size:1.5vw; font-family:Georgia; font-style:italic;font-weight:normal;color:black">
+                                Full Report
+                            </a>
+
                         </div>
                         
                         
